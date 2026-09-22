@@ -1358,18 +1358,88 @@ textarea {
 
 @media (max-width: 640px) {
   .topbar-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 8px;
+    min-height: 34px;
+    padding: 6px 0;
+    font-size: 0.62rem;
+  }
+
+  .topbar-inner .topbar-item {
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  .topbar-inner .topbar-item:nth-child(2),
+  .topbar-socials {
+    display: none;
   }
 
   .header-inner {
-    min-height: 80px;
+    min-height: 70px;
+    gap: 8px;
   }
 
-  .header-actions .icon-button span:last-child,
+  .brand {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    box-shadow: 0 7px 16px rgba(255, 122, 26, 0.16);
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+    letter-spacing: -0.04em;
+  }
+
+  .brand-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 0.08em;
+  }
+
+  .header-actions {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .header-actions .icon-button,
   .header-actions .favorite-link {
     display: none;
+  }
+
+  .cart-button {
+    width: 42px;
+    height: 42px;
+    justify-content: center;
+    gap: 0;
+    padding: 8px;
+    border-radius: 12px;
+  }
+
+  .cart-button span:nth-child(2) {
+    display: none;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 19px;
+    height: 19px;
+    font-size: 0.62rem;
+  }
+
+  .menu-toggle {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
   }
 
   .hero {
@@ -1382,6 +1452,21 @@ textarea {
 
   .hero-visual {
     min-height: 360px;
+  }
+
+  .offer-phones {
+    width: 100%;
+    max-width: 100%;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .offer-phones img {
+    width: calc((100% - 16px) / 3);
+    min-width: 0;
+    height: 150px;
+    border-width: 2px;
+    border-radius: 12px;
   }
 
   .hero-device--main {
