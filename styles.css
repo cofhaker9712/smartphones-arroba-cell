@@ -1,17 +1,17 @@
 :root {
-  --bg: #f7f7f8;
+  --bg: #faf9ff;
   --white: #ffffff;
-  --black: #0d0d0f;
-  --navy: #0d1728;
-  --navy-2: #101827;
-  --orange: #ff7a1a;
-  --orange-dark: #ea6500;
+  --black: #000000;
+  --navy: #000000;
+  --navy-2: #120022;
+  --orange: #7c2aff;
+  --orange-dark: #6200b8;
   --gray-100: #f0f2f5;
   --gray-200: #e5e7eb;
   --gray-300: #d1d5db;
   --gray-500: #64748b;
   --gray-700: #374151;
-  --shadow: 0 18px 42px rgba(15, 23, 42, 0.12);
+  --shadow: 0 18px 42px rgba(98, 0, 184, 0.16);
   --radius-xl: 28px;
   --radius-lg: 18px;
   --radius-md: 12px;
@@ -112,8 +112,14 @@ textarea {
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
   line-height: 1.1;
+}
+
+.brand-logo {
+  width: 110px;
+  height: 108px;
+  display: block;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -127,9 +133,9 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #ff7a1a;
+  color: var(--orange);
   flex-shrink: 0;
-  box-shadow: 0 12px 28px rgba(255, 122, 26, 0.18);
+  box-shadow: 0 12px 28px rgba(124, 42, 255, 0.2);
   border-radius: 22px;
 }
 
@@ -137,6 +143,14 @@ textarea {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: inherit;
 }
 
 .brand-name {
@@ -248,7 +262,7 @@ textarea {
 }
 
 .hero {
-  background: linear-gradient(135deg, #f8fafc 0%, #eef4ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f2eaff 100%);
   padding: 48px 0 32px;
 }
 
@@ -263,7 +277,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  background: rgba(255, 122, 26, 0.1);
+  background: rgba(124, 42, 255, 0.1);
   color: var(--orange-dark);
   font-weight: 700;
   font-size: 0.76rem;
@@ -327,9 +341,9 @@ textarea {
 }
 
 .button.primary {
-  background: linear-gradient(135deg, var(--orange) 0%, #ff8d2f 100%);
+  background: linear-gradient(135deg, var(--orange-dark) 0%, var(--orange) 100%);
   color: var(--white);
-  box-shadow: 0 16px 28px rgba(255, 122, 26, 0.28);
+  box-shadow: 0 16px 28px rgba(98, 0, 184, 0.3);
 }
 
 .button.secondary {
@@ -417,7 +431,7 @@ textarea {
   gap: 14px;
   padding: 22px 18px;
   border: 1px solid rgba(15, 23, 42, 0.06);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
   border-radius: var(--radius-lg);
 }
 
@@ -427,7 +441,7 @@ textarea {
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: rgba(255, 122, 26, 0.08);
+  background: rgba(124, 42, 255, 0.08);
   color: var(--orange);
   font-size: 1.6rem;
 }
@@ -514,7 +528,7 @@ textarea {
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: rgba(255, 122, 26, 0.08);
+  background: rgba(124, 42, 255, 0.08);
   color: var(--orange);
   font-size: 1.2rem;
 }
@@ -526,7 +540,7 @@ textarea {
 }
 
 .offer-banner {
-  background: linear-gradient(135deg, #0d1728 0%, #151f32 100%);
+  background: linear-gradient(135deg, #000000 0%, #6200b8 100%);
   padding: 56px 0;
   color: var(--white);
   position: relative;
@@ -690,7 +704,7 @@ textarea {
 
 .product-image-wrap {
   position: relative;
-  background: linear-gradient(180deg, #f1f5f9 0%, #e9eef6 100%);
+  background: linear-gradient(180deg, #f7f1ff 0%, #eadbff 100%);
   border-radius: 16px;
   overflow: hidden;
   height: 280px;
@@ -706,7 +720,7 @@ textarea {
   position: absolute;
   left: 10px;
   top: 10px;
-  background: rgba(255, 122, 26, 0.96);
+  background: rgba(124, 42, 255, 0.96);
   color: var(--white);
   border-radius: 999px;
   padding: 7px 10px;
@@ -860,7 +874,7 @@ textarea {
 }
 
 .newsletter {
-  background: linear-gradient(180deg, #ffffff 0%, #eff5ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f2eaff 100%);
 }
 
 .newsletter-inner {
@@ -1383,14 +1397,18 @@ textarea {
 
   .brand {
     min-width: 0;
-    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 64px;
+    height: 68px;
   }
 
   .brand-mark {
     width: 48px;
     height: 48px;
     border-radius: 14px;
-    box-shadow: 0 7px 16px rgba(255, 122, 26, 0.16);
+    box-shadow: 0 7px 16px rgba(124, 42, 255, 0.2);
   }
 
   .brand-name {
