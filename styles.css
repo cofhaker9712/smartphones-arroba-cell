@@ -1136,8 +1136,8 @@ textarea {
 }
 
 .payment-options {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
 }
 
@@ -1146,8 +1146,23 @@ textarea {
   align-items: center;
   gap: 8px;
   background: var(--gray-100);
-  padding: 12px 14px;
+  padding: 11px 12px;
   border-radius: 10px;
+  min-width: 0;
+  width: 100%;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.payment-options label:hover {
+  background: #ebecf3;
+}
+
+.payment-options input {
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .confirmation-box {
@@ -1514,6 +1529,31 @@ textarea {
   .two-cols,
   .confirmation-checks {
     grid-template-columns: 1fr;
+  }
+
+  .checkout-shell {
+    padding: 16px 12px;
+  }
+
+  .checkout-step {
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .checkout-step h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .payment-options {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .payment-options label {
+    padding: 10px 11px;
+    font-size: 0.8rem;
+    border-radius: 10px;
   }
 
   .float-whatsapp,
