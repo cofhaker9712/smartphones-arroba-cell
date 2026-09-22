@@ -1137,32 +1137,35 @@ textarea {
 
 .payment-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 .payment-options label {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--gray-100);
-  padding: 11px 12px;
-  border-radius: 10px;
+  gap: 10px;
+  background: transparent;
+  padding: 4px 0;
+  border-radius: 0;
   min-width: 0;
   width: 100%;
   font-size: 0.92rem;
-  line-height: 1.35;
+  line-height: 1.3;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .payment-options label:hover {
-  background: #ebecf3;
+  opacity: 0.9;
 }
 
 .payment-options input {
   margin: 0;
   flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--orange);
 }
 
 .confirmation-box {
@@ -1546,14 +1549,17 @@ textarea {
   }
 
   .payment-options {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 
   .payment-options label {
-    padding: 10px 11px;
-    font-size: 0.8rem;
-    border-radius: 10px;
+    padding: 3px 0;
+    font-size: 0.82rem;
+  }
+
+  .payment-options input {
+    width: 16px;
+    height: 16px;
   }
 
   .float-whatsapp,
