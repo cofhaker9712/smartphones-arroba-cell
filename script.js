@@ -1018,13 +1018,14 @@ function bindSearchAndFilters() {
       const freight = subtotal > 0 ? 39 : 0;
       const total = subtotal + freight - discount;
 
+      const companyWhatsappNumber = '5583986882292';
       const message = `Olá, ARROBA CELL! 👋%0A%0A🛍️ NOVO PEDIDO%0A%0A👤 CLIENTE:%0ANome:%20${encodeURIComponent(customerName)}%0ATelefone:%20${encodeURIComponent(phone.toString())}%0AE-mail:%20${encodeURIComponent(email.toString())}%0A%0A📦 PRODUTOS:%0A${state.cart.map(item => {
         const product = products.find(p => p.id === item.id);
         return `${item.qty}x ${encodeURIComponent(product?.name || '')}%0AValor:%20${encodeURIComponent(formatCurrency((product?.promoPrice || product?.price || 0) * item.qty))}`;
       }).join('%0A')}%0A%0A🧾 RESUMO:%0ASubtotal:%20${encodeURIComponent(formatCurrency(subtotal))}%0AFrete:%20${encodeURIComponent(formatCurrency(freight))}%0ADesconto:%20${encodeURIComponent(formatCurrency(discount))}%0A%0A💰 TOTAL:%0A${encodeURIComponent(formatCurrency(total))}%0A%0A💳 FORMA%20DE%20PAGAMENTO:%0A${encodeURIComponent(paymentMethod.toString())}%0A%0A📍 ENDEREÇO:%0A${encodeURIComponent(street)},%20${encodeURIComponent(number)}%0A${encodeURIComponent(complement ? complement : 'Sem complemento')}%0A${encodeURIComponent(district)}%0A${encodeURIComponent(city)}%20-%20${encodeURIComponent(stateValue)}%0ACEP:%20${encodeURIComponent(cep.toString())}%0A%0A📝 OBSERVAÇÕES:%0A${encodeURIComponent(notes.toString())}%0A%0AAguardo%20confirmação%20do%20pedido.`;
 
-      window.location.href = `https://wa.me/5583986882292?text=${message}`;
-      window.location.assign('confirmacao.html');
+      const whatsappUrl = `https://wa.me/${companyWhatsappNumber}?text=${message}`;
+      window.location.href = whatsappUrl;
     });
   }
 
